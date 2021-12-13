@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<environments default="development">
+		<environment id="development">
+			<transactionManager type="JDBC" />
+			<dataSource type="POOLED">
+				<property name="driver" value="com.ibm.db2.jcc.DB2Driver" />
+				<property name="url" value="jdbc:db2://a.b.c.d:pppp/dbname" />
+				<property name="username" value="user" />
+				<property name="password" value="pass" />
+			</dataSource>
+		</environment>
+	</environments>
+	<mappers>
+		<mapper resource="app/test/db/model/TestObj.xml" />
+	</mappers>
+</configuration>

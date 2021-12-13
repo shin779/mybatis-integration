@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC '-//mybatis.org//DTD Mapper 3.0//EN'
+  'http://mybatis.org/dtd/mybatis-3-mapper.dtd'>
+<mapper namespace="TEST_OBJ">
+	<resultMap id="BaseResultMap" type="app.test.db.model.TestObj">
+		<result column="VALUE" jdbcType="NUMERIC" property="value" />
+	</resultMap>
+	<select id="test" resultType="Integer">
+		SELECT 1 AS VALUE FROM sysibm.sysdummy1
+	</select>
+</mapper>
